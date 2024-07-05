@@ -13,7 +13,7 @@ st.set_page_config(page_title="KNN",page_icon='🪸',layout='centered')
 
 data_set = load_digits()
 x_train, x_test, y_train, y_test = train_test_split(data_set.data,data_set.target,test_size=0.2,random_state=10)
-model = joblib.load("D:\\Machine_learning\\K_nearest_neabure\\model.job")
+model = joblib.load("model.job")
 
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: #ff8c1a'>KNN classifier</h1>", unsafe_allow_html=True)
@@ -44,11 +44,3 @@ st.pyplot(fig)
 st.markdown("<h3 style='text-align: center; color: #ff8c1a'>Classification Report</h1>", unsafe_allow_html=True)
 
 st.text(classification_report(y_test,model.predict(x_test)))
-
-
-# theam attributes:
-# [theme]
-# base="light"
-# primaryColor="#ff8c1a"
-# backgroundColor="#f5dbc2"
-# secondaryBackgroundColor="#ffefe2"
